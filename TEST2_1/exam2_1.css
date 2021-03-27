@@ -1,0 +1,108 @@
+html {
+  scroll-behavior: smooth;
+}
+html,
+body {
+  padding: 0;
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+  /*weidth, height 안줌///////////////////////////*/
+}
+footer {
+  position: fixed; /*고정하는거 알아내기*/
+  bottom: 0;
+  background-color: #333;
+  color: #fff;
+  padding: 0.75rem;
+  width: 100%;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: whitesmoke;
+  background-color: goldenrod;
+  border-radius: 0.25rem; /*round!!*/
+  transition: all 0.3s; /*0.3초 걸려서 hover 지정한대로 스무스하게 바껴라*/
+  display: inline-block;
+}
+
+a:hover {
+  opacity: 0.6; /*투명도*/
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  /*list-style: none; 차이 /////////////////**/
+}
+
+.breweries {
+  padding: 2rem; /*안줘도 됨. 그냥  보기편하게*/
+  padding-bottom: 76px; /*밑에 안가리게 함*/
+  /*height: 100%  차이*/
+}
+
+.breweries > ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /*300px -> 20%*/
+  gap: 1rem;
+  /*grid-auto-rows: 450px; 잠깐 지우기--------*/
+}
+
+.breweries > ul > li {
+  position: relative; /*이까지만하면 달라지는거 없*/
+  border: 1px solid gainsboro;
+  border-radius: 0.5rem;
+  padding-bottom: 2.8rem;
+  /*padding-bottom:2.8rem;차이//////////////////////*/
+}
+
+.breweries > ul > li > figure {
+  overflow: hidden; /*부모 넘어가면 짤림*/
+  position: relative; /*자기기준*/
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  max-height: 220px; /*굳이 필요는없지만 이상해질거 같다궁ㅇ*/
+}
+
+.breweries > ul > li > figure > img {
+  width: 100%;
+}
+
+.breweries > ul > li > figure > figcaption {
+  position: absolute; /*부모기준?*/
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7); /*알파값?*/
+  width: 100%;
+}
+
+.breweries > ul > li > figure > figcaption > h3 {
+  color: #fff;
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.breweries > ul > li > p {
+  font-size: 1rem; /*부모도 1rem이라 의미없음*/
+  line-height: 1.5; /*글씨간격*/
+  padding: 1rem 0.75rem;
+  color: #666;
+
+  display: -webkit-box;
+  word-wrap: break-word;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 54px;
+}
+
+.breweries > ul > li > a {
+  position: absolute;
+  padding: 0.5rem 1rem;
+  left: 0.5rem;
+  bottom: 0.5rem;
+}

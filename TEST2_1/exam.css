@@ -1,0 +1,45 @@
+html { scroll-behavior: smooth; }
+
+footer { position: fixed; bottom:0; width: 100%; }
+
+.breweries>ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.breweries>ul>li {
+    position: relative;
+    border: 1px solid #E2E2E2; border-radius: .5rem;    
+}
+
+.breweries>ul>li>figure {
+    overflow: hidden;
+    position: relative;
+    border-top-left-radius: .5rem;  
+    border-top-right-radius: .5rem;
+    max-height: 220px;
+}
+
+.breweries>ul>li>figure>img {
+    width: 100%;
+}
+
+.breweries>ul>li>figure>figcaption {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .7);
+    width: 100%;
+}
+
+
+.breweries>ul>li>p {    
+    line-height: 1.5;
+    padding: 1rem .75rem;
+    color: #666666;
+}
+
+.breweries>ul>li a {
+    padding: .5rem 1rem;
+    margin: .5rem;
+}
