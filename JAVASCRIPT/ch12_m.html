@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        var arr={
+            0:10,
+            1:20,
+            2:30,
+            3:40,
+            length:4,
+            forEach: function(f){
+                for(var i=0;i<this.length;i++){
+                    f(this[i]);
+                }
+            },
+            map: function(f){
+                var result=[];
+                for(var i=0;i<this.length;i++){
+                    result[i]=f(this[i]);
+                }
+                return result;
+            }
+        };
+        
+        var arr2 = [50,20,30,40];
+        var result = arr2*2;
+        console.log(result);//NaN
+        
+        /*
+        arr.forEach(function(item){
+            console.log(item);
+        })
+       */
+        
+        var result = arr.map(function(item){
+            return item*2;
+        });//20,40,60,80
+
+        function myMap(item){
+            return item -2;
+        }
+        var result2 = arr.map(myMap);
+
+        var result3 = arr.map(function(item){
+            if(item>=30){
+                return item*2;
+            }
+            return item;
+        });//10, 20, 60, 80
+
+        console.log(result);
+        console.log(result2);
+        console.log(result3);
+        console.log(arr);//원본은 건들지 않음!
+    </script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+html {
+  scroll-behavior: smooth;
+}
+/*미디어 쿼리??*/
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+footer {
+  background-color: black;
+  color: blanchedalmond;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  background-color: goldenrod;
+  border-radius: 0.25rem;
+}
+
+.breweries > ul > li > a {
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.breweries > ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+  gap: 1rem;
+}
+
+.breweries > ul > li {
+  position: relative; /*왜넣었징*/
+  border: 1px solid gray;
+  border-collapse: collapse;
+  border-radius: 0.5rem;
+}
+
+.breweries > ul > li > figure {
+  position: relative;
+  overflow: hidden;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  max-height: 220px;
+}
+
+.breweries > ul > li > figure > img {
+  width: 100%;
+}
+
+.breweries > ul > li > figure > figcaption {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.breweries > ul > li > figure > figcaption > h3 {
+  color: #fff;
+}
+
+.breweries > ul > li > p {
+  line-height: 1.5;
+  color: gray;
+  padding: 1rem 0.75rem; /*필요없낭????*/
+}

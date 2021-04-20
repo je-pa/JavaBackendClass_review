@@ -99,7 +99,7 @@ footer {
   position: absolute;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.7);
-  width: 100%;
+  width: 90%;
 }
 
 .breweries > ul > li > figure > figcaption > h3 {
